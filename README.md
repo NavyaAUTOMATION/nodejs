@@ -1,15 +1,15 @@
-#Service Deployment
-This repository contains the necessary code and configuration files to deploy a simple Node JS HTTP service displaying a text using Docker, GitHub Repo, Amazon EKS using terraform, and Jenkins for CI/CD.
+Service Deployment -
+ This repository contains the necessary code and configuration files to deploy a simple Node JS HTTP service displaying a text using Docker, GitHub Repo, Amazon EKS using terraform, and Jenkins for CI/CD.
 
-#Prerequisites
+Prerequisites
 
-EC2 Instance 
-AWS CLI configured with appropriate permissions.
-Docker installed in EC2 instance.
-EKS Cluster Set up using Terraform IaC.
-kubectl installed in EC2 instance..
-Jenkins installed and configured with Docker and Kubernetes plugins.
-AWS IAM roles and policies for EKS.
+1. EC2 Instance 
+2. AWS CLI configured with appropriate permissions.
+3. Docker installed in EC2 instance.
+4. EKS Cluster Set up using Terraform IaC.
+5. kubectl installed in EC2 instance..
+6. Jenkins installed and configured with Docker and Kubernetes plugins.
+7. AWS IAM roles and policies for EKS.
 
 Step 1: Create a Simple Node.js Application
 

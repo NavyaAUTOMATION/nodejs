@@ -1,7 +1,7 @@
-Service Deployment -
+# Service Deployment -
  This repository contains the necessary code and configuration files to deploy a simple Node JS HTTP service displaying a text using Docker, GitHub Repo, Amazon EKS using terraform, and Jenkins for CI/CD.
 
-Prerequisites
+# Prerequisites
 
 1. EC2 Instance 
 2. AWS CLI configured with appropriate permissions.
@@ -11,7 +11,7 @@ Prerequisites
 6. Jenkins installed and configured with Docker and Kubernetes plugins.
 7. AWS IAM roles and policies for EKS.
 
-Step 1: Create a Simple Node.js Application
+# Step 1: Create a Simple Node.js Application
 
 #Create a directory for your project
  mkdir nodejs
@@ -19,7 +19,7 @@ Step 1: Create a Simple Node.js Application
 #Create the application file (server.js)
 #Create a Dockerfile
 
-Step 2: Push the Code to GitHub
+# Step 2: Push the Code to GitHub
 
 #Initialize a git repository
 git init
@@ -29,7 +29,7 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/NavyaAUTOMATION/nodejs.git
 git push -u origin master
 
-Step 3: Create the EKS Cluster Using Terraform
+# Step 3: Create the EKS Cluster Using Terraform
 
 #Install Terraform
 #Create a new directory for your Terraform configuration
@@ -41,7 +41,7 @@ terraform init
 terraform apply
 #terraform state file will be generated
 
-Step4: Setup AWS EKS Cluster
+# Step4: Setup AWS EKS Cluster
 
 #Install the AWS CLI
  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -60,7 +60,7 @@ sudo mv /tmp/eksctl /usr/local/bin
  aws eks --region eu-north-1 update-kubeconfig --name Nodeapp
 
 
-Step 5: Launch an EC2 Instance
+# Step 5: Launch an EC2 Instance
 
 #Launch an Instance
 #Choose an Ubuntu
@@ -88,7 +88,7 @@ Step 5: Launch an EC2 Instance
  Click "View Instances" to see your newly launched instance.
  Wait for the instance to enter the "running" state.
 
-Step 6: Connect to Your EC2 Instance
+# Step 6: Connect to Your EC2 Instance
 
 #Locate Instance
 #Set Permissions on Your Key Pair
@@ -97,7 +97,7 @@ Step 6: Connect to Your EC2 Instance
 #Set Up Your EC2 Instance
     sudo yum update -y
 
-Step 7: Configure Jenkins for CI/CD
+# Step 7: Configure Jenkins for CI/CD
 
 #Install Jenkins
  sudo yum update -y
@@ -126,7 +126,7 @@ Step 7: Configure Jenkins for CI/CD
 #Configure the Jenkins Pipeline
    - In the Pipeline section of the Jenkins job configuration, set the Pipeline script to use the Jenkinsfile from repository.
 
-Step 8: Trigger the Jenkins Pipeline
+# Step 8: Trigger the Jenkins Pipeline
   
   We can manually trigger the pipeline job in Jenkins or set up a webhook in GitHub to trigger the job on every push.
 #Verify Deployment
@@ -138,12 +138,3 @@ Step 8: Trigger the Jenkins Pipeline
    kubectl get svc node-app-service
   Once the service is created, we can access your Node.js application using the external IP address of the service.
   
-
-
-
-
-
-
-
-
-

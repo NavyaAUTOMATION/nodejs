@@ -45,17 +45,8 @@
 
 >>>Create IAM Role for EKS Cluster
 >>>Install the AWS CLI
-    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    unzip awscliv2.zip
-    sudo ./aws/install
 >>>Install kubectl
-    curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s 
-    https://storage.googleapis.com/kubernetesrelease/release/stable.txt)/bin/linux/amd64/kubectl"
-    chmod +x ./kubectl
-    sudo mv ./kubectl /usr/local/bin/kubectl
 >>>Install eksctl
-    curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-    sudo mv /tmp/eksctl /usr/local/bin
 >>>Create an EKS cluster
     eksctl create cluster --name Nodeapp --region eu-north-1 --nodes 2
 >>>Configure kubectl for EKS
@@ -103,9 +94,7 @@
 
 >>>Install Jenkins
  sudo yum update -y
- sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
- sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
- sudo yum install jenkins java-1.8.0-openjdk-devel -y
+ sudo yum install jenkins 
  sudo systemctl start jenkins
  sudo systemctl enable jenkins
 >>>Access Jenkins:

@@ -7,7 +7,7 @@ pipeline {
     stage("GitHub") {
             steps {
                 script {
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/NavyaAUTOMATION/nodejs']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NavyaAUTOMATION/nodejs']])
                 }
             }
         }

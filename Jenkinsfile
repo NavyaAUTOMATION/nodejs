@@ -21,7 +21,7 @@ pipeline {
      stage('Build NodeJS Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t navya291195/node-app-3.1.0 .'
+                  sh 'docker build -t navya291195/nodeapp-3.1.0 .'
                 }
             }
         }

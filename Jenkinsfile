@@ -33,7 +33,7 @@ pipeline {
                  withCredentials([string(credentialsId: 'navya291195docker', variable: 'navya291195docker')]) {
                     sh 'docker login -u navya291195 -p ${navya291195docker}'
             }
-            sh 'docker push navya291195/node-app-3.1.0'
+            sh 'docker push navya291195/nodeapp-3.1.0'
         }
             }   
         }

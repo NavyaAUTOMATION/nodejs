@@ -21,7 +21,7 @@ pipeline {
      stage('Build NodeJS Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t navya291195/nodeapp-3.1.0 .'
+                  sh 'docker build -t navya291195/nodeapp-1-3.1.0 .'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                  withCredentials([string(credentialsId: 'navya291195docker', variable: 'navya291195docker')]) {
                     sh 'docker login -u navya291195 -p ${navya291195docker}'
             }
-            sh 'docker push navya291195/nodeapp-3.1.0'
+            sh 'docker push navya291195/nodeapp-1-3.1.0'
         }
             }   
         }
